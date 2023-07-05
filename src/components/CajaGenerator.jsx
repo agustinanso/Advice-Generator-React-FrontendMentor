@@ -65,7 +65,7 @@ const CajaGenerator = () => {
       <img src="/pattern-divider-mobile.svg" className="block sm:hidden" />
       <div
         disabled={buttonDisabled}
-        onClick={handleClick || getAdvice}
+        onClick={handleClick}
         className="bg-[#52ffa8] w-[64px] h-[64px] rounded-full flex flex-col justify-center items-center cursor-pointer absolute -bottom-9 hover:drop-shadow-3xl">
         <img src="icon-dice.svg" />
       </div>
