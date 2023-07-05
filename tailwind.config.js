@@ -16,6 +16,7 @@ export default {
       dropShadow: {
         "3xl": "0 0px 22px rgba(82, 255, 168 ,1)",
       },
+
       trasitionDuration: {
         hola: "4000ms",
       },
