@@ -25,6 +25,16 @@ const CajaGenerator = () => {
       });
   };
 
+  const handleClick = () => {
+    if (!buttonDisabled) {
+      setLoading(true);
+      setTimeout(() => {
+        setLoading(true);
+        getAdvice();
+      }, 1000);
+    }
+  };
+
   useEffect(() => {
     getAdvice();
   }, []);
@@ -37,7 +47,7 @@ const CajaGenerator = () => {
           </p>
 
           <div>
-            <div className="p-10 border-8 border-[#52ffa8] border-solid rounded-full w-26 h-26 border-t-transparent animate-spin mt-10 mb-16"></div>
+            <div className="p-10 border-8 border-[#52ffa8] border-solid rounded-full w-26 h-26 border-t-transparent animate-spin mt-10 mb-16 "></div>
           </div>
         </>
       ) : (
@@ -54,8 +64,8 @@ const CajaGenerator = () => {
       <img src="/pattern-divider-desktop.svg" className="hidden sm:block" />
       <img src="/pattern-divider-mobile.svg" className="block sm:hidden" />
       <div
-        onClick={getAdvice}
         disabled={buttonDisabled}
+        onClick={handleClick || getAdvice}
         className="bg-[#52ffa8] w-[64px] h-[64px] rounded-full flex flex-col justify-center items-center cursor-pointer absolute -bottom-9 hover:drop-shadow-3xl">
         <img src="icon-dice.svg" />
       </div>
